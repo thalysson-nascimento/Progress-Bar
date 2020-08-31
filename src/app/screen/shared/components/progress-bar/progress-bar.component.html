@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="header">
+    <label>Title</label>
+    <label>Informação</label>
+  </div>
+
+  <div class="progress-bar">
+    <div *ngFor="let progress of progressBar" [class]="progress"></div>
+  </div>
+
+  <div [@progressAnimation]="progressBar.length" class="progress-bar">
+    <div *ngFor="let progress of progressBar" class="progress-item">
+      <div [class]="progress"></div>
+    </div>
+  </div>
+
+  <div class="description">
+    <p>descrição total do componente</p>
+  </div>
+</div>
