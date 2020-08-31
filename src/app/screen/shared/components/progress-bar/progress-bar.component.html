@@ -4,10 +4,6 @@
     <label>Informação</label>
   </div>
 
-  <div class="progress-bar">
-    <div *ngFor="let progress of progressBar" [class]="progress"></div>
-  </div>
-
   <div [@progressAnimation]="progressBar.length" class="progress-bar">
     <div *ngFor="let progress of progressBar" class="progress-item">
       <div [class]="progress"></div>
