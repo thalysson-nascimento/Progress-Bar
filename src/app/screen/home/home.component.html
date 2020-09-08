@@ -1,2 +1,30 @@
 <p>home works!</p>
 <app-progress-bar></app-progress-bar>
+<br>
+<div *ngFor="let data of periodDiscount">
+  <p>
+    Data final: {{ data.effective | date:'dd MMM' }}
+    <br>
+    Data inicial: {{ data.end | date:'dd MMM' }}
+  </p>
+</div>
+
+<p>
+  Nível de desconto atual: {{ countCurrentDiscount }}
+</p>
+
+<p>
+  Próximo nível de desconto: {{ nextDiscount }}
+</p>
+
+<p>
+  Valor atual: {{ currentValueDiscount | currency:'BRL' }}
+</p>
+
+<p>
+  Valor faltante do próximo nível de desconto: {{ remainingAmountNextDiscount | currency:'BRL' }}
+</p>
+
+<p>
+  Valor mínimo do ultimo array da faixa de desconto: {{ lastMinimumValueDiscount | currency:'BRL' }}
+</p>
