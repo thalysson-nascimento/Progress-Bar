@@ -1,0 +1,21 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.fundos {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+  background: slategray;
+}
+
+.screen-modal {
+ width: 100vw;
+ height: 100vh;
+ position: fixed;
+ overflow-y: scroll;
+ color: gray;
+ bottom: 0; // -100vh
+ background-color: #fff;
+}

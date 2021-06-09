@@ -59,28 +59,33 @@ export class HomeComponent implements OnInit {
     },
   ];
 
+  dataArray = [
+    {id: 'mastercard', label: 'mastercard', value: 'mastercard'},
+    {id: 'hipercard', label: 'hipercard', value: 'hipercard'},
+    {id: 'visa', label: 'visa platinum', value: 'visa'},
+    {id: 'visa-black', label: 'visa black', value: 'visa-black'},
+    {id: 'mastercard-gold', label: 'mastercard gold', value: 'mastercard-gold'},
+    {id: 'visa-uniclass', label: 'visa uniclass', value: 'visa-uniclass'},
+  ];
+
   periodDiscount: {};
   countCurrentDiscount: {};
   nextDiscount: number | string;
   currentValueDiscount: any;
   remainingAmountNextDiscount: string;
   lastMinimumValueDiscount: string;
+  showModal: boolean;
+  closeModalScreen: boolean;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
-    console.log('RETORNANDO A DATA DO PERÍODO DO DISCONTO: ');
-    console.log(this.periodDiscount = this.getPeriodDiscountLevel());
-    console.log('RETORNANDO O NÍVEL DO DESCONTO ATUAL: ');
-    console.log(this.countCurrentDiscount = this.getCountCurrentDiscountLevel());
-    console.log('RETORNANDO O PRÓXIMO NÍVEL DE DESCONTO: ');
-    console.log(this.nextDiscount = this.getNextDiscountLevel());
-    console.log('RETORNANDO O VALOR ATUAL DO NÍVEL DE DESCONTO: ');
-    console.log(this.currentValueDiscount = this.getCurrentValueDiscountLevel());
-    console.log('RETORNANDO O VALOR FALTANTE DO PRÓXIMO NÍVEL DE DESCONTO: ');
-    console.log(this.remainingAmountNextDiscount = this.getRemainingAmountNextDiscountLevel());
-    console.log('RETORNANDO O VALOR MÍNIMO DO ULTIMO ARRAY DO NÍVEL DE DESCONTO: ');
-    console.log(this.lastMinimumValueDiscount = this.getLastMinimumValueDiscountLevel());
+    this.manipulandoArray();
+  }
+
+  getChangeValue(typeCard: any) {
+    console.log('Cartão selecionado: ', typeCard);
   }
 
   getPeriodDiscountLevel() {
@@ -167,6 +172,68 @@ export class HomeComponent implements OnInit {
     });
 
     return rangeDiscount[0][0].valor_minimo;
+  }
+
+  linkParaAndroid() {
+    window.open('market://details?id=com.itau.broker&hl=pt_BR&gl=US');
+  }
+
+  manipulandoArray() {
+    let account = new Array();
+    const numberAccount = 'sessionStorage()';
+
+    /**
+     * Verifica se a propriedade existe
+     * Caso exista, converte de String para Object
+     */
+    if (localStorage.hasOwnProperty('account')) {
+      account = JSON.parse(localStorage.getItem('account'));
+    }
+
+    /* Adiciona um novo valor no array criado */
+
+    const listAccount = account.map(item => item.user_account);
+
+    if (listAccount.length === 0) {
+      console.log('Essa conta não existe nessa seção');
+      account.push({user_account: '1234'});
+    }
+
+    if (!listAccount.includes('5678')) {
+      console.log('Essa conta não existe nessa seção');
+      account.push({user_account: '5678'});
+    }
+
+    /* Salva o item */
+    localStorage.setItem('account', JSON.stringify(account));
+
+    // const account = ['5678'];
+
+    // localStorage.setItem('list_account', JSON.stringify(account));
+
+    // const getAccount = JSON.parse(localStorage.getItem('list_account'));
+
+    // console.log('MINHA LISTA DE CONTAS: ', getAccount);
+
+    // const containAccount = account.includes('5678');
+
+    // if (containAccount) {
+    //   console.log('Contain a conta');
+    // }
+
+    // console.log('Lista de contas', account);
+  }
+
+  closeModal(event: any) {
+    const close = this.closeModalScreen = event;
+    console.log('===', this.closeModalScreen);
+    console.log('===', close);
+    return close;
+  }
+
+  showModalFunds() {
+    this.showModal = !this.showModal;
+    console.log(this.showModal);
   }
 
 }

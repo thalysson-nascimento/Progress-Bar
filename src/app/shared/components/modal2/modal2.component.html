@@ -1,0 +1,110 @@
+<!-- <div [@dialog] *ngIf="visible" class="dialog">
+  <button
+    *ngIf="closable"
+    (click)="close()"
+    aria-label="Close"
+    class="dialog__close-btn"
+  >
+    X
+  </button>
+  <ng-content></ng-content>
+</div>
+<div *ngIf="visible" class="overlay" (click)="close()"></div> -->
+
+
+
+<!-- <button (click)="showModal = !showModal">Toggle</button> -->
+
+<div @inOut *ngIf="showModal" class="screen-modal">
+  {{headerTitle}}
+  <br><br>
+  <button (click)="closeModal()">Fechar modal</button>
+  <br>
+  <ng-content></ng-content>
+</div>
+
+
+
+
+<!--
+<div class="container">
+  <div class="fundos">
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+    tela de fundos <br>
+  </div>
+
+  <div class="screen-modal">
+    screen <br>
+    screen <br>
+    screen <br>
+    screen <br>
+    screen <br>
+    screen <br>
+    screen <br>
+    screen <br>
+    screen <br>
+    screen <br>
+  </div>
+</div> -->

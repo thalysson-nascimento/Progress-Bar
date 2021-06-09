@@ -1,0 +1,30 @@
+.box {
+  padding: 1px;
+  height: 1px;
+  background-color: blueviolet;
+  color: #fff;
+  transition-property: padding;
+  transition-duration: 0.5s;
+}
+
+.box:hover {
+  padding-top: 100px;
+  padding-bottom: 20px;
+}
+
+.container {
+  background: blueviolet;
+  position: relative;
+  color: #fff;
+  height: 100vh;
+}
+
+.modal {
+  width: 100wh;
+  background: #fff;
+  color: gray;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}

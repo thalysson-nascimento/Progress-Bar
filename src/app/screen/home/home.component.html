@@ -1,30 +1,220 @@
-<p>home works!</p>
+<!-- <h3>Componente Tooltip</h3>
+
+<button type="button" (click)="modal.show()">test</button>
+<app-modal #modal>
+  <div class="app-modal-header">
+    <button type="button" class="btn btn-default" (click)="modal.hide()">Close</button>
+  </div>
+  <div class="app-modal-body">
+    Whatever content you like, form fields, anything
+  </div>
+</app-modal>
+
+<h3>Componente ProgressBar</h3>
 <app-progress-bar></app-progress-bar>
-<br>
-<div *ngFor="let data of periodDiscount">
-  <p>
-    Data final: {{ data.effective | date:'dd MMM' }}
-    <br>
-    Data inicial: {{ data.end | date:'dd MMM' }}
-  </p>
+
+<h3>Componete Radio Button</h3>
+<app-radio-button
+  title="lista de cartões disponíveis"
+  name="companie"
+  [dataArray]="dataArray"
+  (value)="getChangeValue($event)"
+></app-radio-button>
+
+
+<h3>Componente fundo</h3>
+
+<app-fund-card></app-fund-card>
+
+
+<h3>Link para abrir no android a loja</h3>
+
+<button type="button" (click)="linkParaAndroid()">test</button>
+
+<br><br><br>
+
+<h3>Abrir modal</h3>
+
+<app-modal-header></app-modal-header>
+
+
+<h3>CSS transition</h3>
+<div class="box">
+  oi
 </div>
 
-<p>
-  Nível de desconto atual: {{ countCurrentDiscount }}
-</p>
+<br><br><br><br><br><br><br><br> -->
+<!-- <div class="container">
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
 
-<p>
-  Próximo nível de desconto: {{ nextDiscount }}
-</p>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
+    <h3>Modal</h3>
 
-<p>
-  Valor atual: {{ currentValueDiscount | currency:'BRL' }}
-</p>
+  <div class="modal">
+      Modal <br>
+      Modal <br>
+    Modal <br>
+    Modal <br>
+    Modal <br>
+    Modal <br>
+    Modal <br>
+    Modal <br>
+    Modal <br>
+    Modal <br>
+    Modal <br>
+    Modal <br>
+    Modal <br>
+    Modal <br>
+    Modal <br>
+    Modal <br>
+    Modal <br>
+    Modal <br>
+    Modal <br>
+    Modal <br>
+    Modal <br>
+    Modal <br>
+    Modal <br>
+    Modal <br>
+    Modal <br>
+    Modal <br>
+    Modal <br>
+    Modal <br>
+    Modal <br>
+    Modal <br>
+    Modal <br>
+    Modal <br>
+    Modal <br>
+    Modal <br>
+    Modal <br>
+    Modal <br>
+    Modal <br>
+    Modal <br>
+    Modal <br>
+    Modal <br>
+    Modal <br>
+    Modal <br>
+    Modal <br>
+    Modal <br>
+    Modal <br>
+    Modal <br>
+    Modal <br>
+    Modal <br>
+    Modal <br>
+    Modal <br>
 
-<p>
-  Valor faltante do próximo nível de desconto: {{ remainingAmountNextDiscount | currency:'BRL' }}
-</p>
+  </div>
+</div> -->
 
-<p>
-  Valor mínimo do ultimo array da faixa de desconto: {{ lastMinimumValueDiscount | currency:'BRL' }}
-</p>
+
+
+<!-- <app-modal2></app-modal2> -->
+<!-- <button (click)="showDialog = !showDialog" class="btn">Open</button>
+
+<app-modal2 [(visible)]="showDialog">
+  <h1>Hello World</h1> -->
+<!-- <button (click)="showDialog = !showDialog" class="btn">Close</button> -->
+<!-- </app-modal2> -->
+
+<h3>Componete Radio Button</h3>
+<app-radio-button
+  title="lista de cartões disponíveis"
+  name="companie"
+  [dataArray]="dataArray"
+  (value)="getChangeValue($event)"
+></app-radio-button>
+
+<br><br><br>
+
+Tela de fundos
+
+<br>
+<button (click)="showModalFunds()">abrir modal</button>
+
+<app-modal2
+  [showModal]="showModal"
+  headerTitle="saiba mais"
+  (closeModalScreen)="closeModal($event)"
+  >
+  <ul>
+      <li>Conteudo do saiba mais</li>
+      <li>Conteudo do saiba mais</li>
+      <li>Conteudo do saiba mais</li>
+      <li>Conteudo do saiba mais</li>
+      <li>Conteudo do saiba mais</li>
+      <li>Conteudo do saiba mais</li>
+      <li>Conteudo do saiba mais</li>
+      <li>Conteudo do saiba mais</li>
+      <li>Conteudo do saiba mais</li>
+      <li>Conteudo do saiba mais</li>
+      <li>Conteudo do saiba mais</li>
+      <li>Conteudo do saiba mais</li>
+      <li>Conteudo do saiba mais</li>
+      <li>Conteudo do saiba mais</li>
+  </ul>
+</app-modal2>
